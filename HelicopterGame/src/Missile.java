@@ -4,8 +4,12 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
+/**
+ * @author Kyle Walter
+ * Project: HelicopterGame
+ * Data Created: Nov 21, 2014
+ */
 public class Missile {
 	private int x, y;
 	private BufferedImage image;

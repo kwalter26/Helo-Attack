@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -10,21 +9,33 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
-import javax.swing.Timer;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
+/**
+ * @author Kyle Walter
+ * Project: HelicopterGame
+ * Data Created: Nov 21, 2014
+ */
 public class Game extends JPanel implements ActionListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Timer timer;
 	
 	private Craft helicopter;
-	private ArrayList eCraft;
-	private ArrayList bgList;
+	private ArrayList<EnemyCraft> eCraft;
+	private ArrayList<Background> bgList;
 	
 	private boolean inGame;
 	private boolean paused;
 	private boolean endLevel;
 	
+	@SuppressWarnings("unused")
 	private static final int GAME_WIDTH = 1200;
+	@SuppressWarnings("unused")
 	private static final int GAME_HEIGHT = 700;
 	
 	private int level;
@@ -49,8 +60,8 @@ public class Game extends JPanel implements ActionListener {
 		kills = 0;
 
 		helicopter = new Craft();
-		eCraft = new ArrayList();
-		bgList = new ArrayList();
+		eCraft = new ArrayList<EnemyCraft>();
+		bgList = new ArrayList<Background>();
 		
 		bgList.add(new Background(0,0));
 		bgList.add(new Background(2460,0));
@@ -154,7 +165,7 @@ public class Game extends JPanel implements ActionListener {
 			}
 		}
 
-		ArrayList ms = helicopter.getMissiles();
+		ArrayList<Missile> ms = helicopter.getMissiles();
 
 		for (int i = 0; i < ms.size(); i++) {
 			Missile m = (Missile) ms.get(i);

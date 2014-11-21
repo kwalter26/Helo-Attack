@@ -6,8 +6,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
+/**
+ * @author Kyle Walter
+ * Project: HelicopterGame
+ * Data Created: Nov 21, 2014
+ */
 public class Craft {
 
 	private String craft = "helicopter.png";
@@ -20,7 +24,7 @@ public class Craft {
 	private boolean visible;
 	private int missileCount;
 
-	private ArrayList missiles;
+	private ArrayList<Missile> missiles;
 
 	private final int CRAFT_WIDTH = 160;
 	private final int CRAFT_HEIGHT = 70;
@@ -33,7 +37,7 @@ public class Craft {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		missiles = new ArrayList();
+		missiles = new ArrayList<Missile>();
 		x = 40;
 		y = 60;
 		visible = true;
@@ -85,7 +89,7 @@ public class Craft {
 		return visible;
 	}
 
-	public ArrayList getMissiles() {
+	public ArrayList<Missile> getMissiles() {
 		return missiles;
 	}
 	

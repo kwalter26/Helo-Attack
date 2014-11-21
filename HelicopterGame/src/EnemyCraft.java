@@ -5,8 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
+/**
+ * @author Kyle Walter
+ * Project: HelicopterGame
+ * Data Created: Nov 21, 2014
+ */
 public class EnemyCraft {
 	private String enemyCraftImage = "enemy.png";
 	
@@ -19,7 +23,7 @@ public class EnemyCraft {
 	private int craftSpeed;
 	private BufferedImage eCraftImage;
 
-	private ArrayList enemies;
+	private ArrayList<EnemyCraft> enemies;
 
 	public EnemyCraft(int s, int counter){
 		craftSpeed = s;
@@ -35,7 +39,7 @@ public class EnemyCraft {
 		}
 	}
 	
-	public ArrayList getEnemies() {
+	public ArrayList<EnemyCraft> getEnemies() {
 		return enemies;
 	}
 

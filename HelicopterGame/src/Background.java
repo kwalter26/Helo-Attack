@@ -3,7 +3,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-
+/**
+ * @author Kyle Walter
+ * Project: HelicopterGame
+ * Data Created: Nov 21, 2014
+ */
 public class Background {
 	private String backgroundFile ="bground.png";
 	private int x;

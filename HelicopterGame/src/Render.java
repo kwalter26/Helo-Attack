@@ -3,9 +3,14 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
+/**
+ * @author Kyle Walter
+ * Project: HelicopterGame
+ * Data Created: Nov 21, 2014
+ */
 public class Render {
 
-	public static void renderBackground(Graphics2D g2d, ArrayList bgList) {
+	public static void renderBackground(Graphics2D g2d, ArrayList<Background> bgList) {
 		for (int i = 0; i < bgList.size(); i++) {
 			Background bg = (Background) bgList.get(i);
 			g2d.drawImage(bg.getImage(), bg.getX(), bg.getY(), bg.getWidth(),
@@ -27,7 +32,7 @@ public class Render {
 	}
 
 	public static void renderMissiles(Graphics g2d, Craft craft) {
-		ArrayList ms = craft.getMissiles();
+		ArrayList<Missile> ms = craft.getMissiles();
 
 		for (int i = 0; i < ms.size(); i++) {
 			Missile m = (Missile) ms.get(i);
@@ -36,7 +41,7 @@ public class Render {
 		}
 	}
 
-	public static void renderEnemyCraft(Graphics2D g2d, ArrayList eCraft) {
+	public static void renderEnemyCraft(Graphics2D g2d, ArrayList<EnemyCraft> eCraft) {
 		for (int i = 0; i < eCraft.size(); i++) {
 			EnemyCraft en = (EnemyCraft) eCraft.get(i);
 			g2d.drawImage(en.getImage(), en.getX(), en.getY(), en.getWidth(),
